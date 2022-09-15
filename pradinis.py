@@ -27,10 +27,10 @@ def ketvirta():
         ivest_met = int(year)
         if (ivest_met % 400 == 0) or (ivest_met % 100 != 0 and ivest_met % 4 == 0):
             r = f"{ivest_met} yra keliamieji"
-            return render_template("metai_keliamieji.html", Metai=r)
+            return render_template("metai_keliamieji.html", metai=r)
         else:
             r = f"{ivest_met} yra nekeliamieji"
-            return render_template("metai_nekeliamieji.html", Metai=r)
+            return render_template("metai_nekeliamieji.html", metai=r)
     else:
         return render_template("ketvirta_uzduotis.html")
 
